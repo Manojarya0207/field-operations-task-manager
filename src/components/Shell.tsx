@@ -83,10 +83,9 @@ export function Shell({ user, onLogout, onQuickAction, children }: ShellProps) {
                 to={item.to}
                 end={item.to === '/'}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'bg-sky-50 text-sky-700 font-semibold shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
+                  `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${isActive
+                    ? 'bg-sky-50 text-sky-700 font-semibold shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
                   }`
                 }
               >
@@ -149,10 +148,9 @@ export function Shell({ user, onLogout, onQuickAction, children }: ShellProps) {
                     end={item.to === '/'}
                     onClick={() => setMobileMenuOpen(false)}
                     className={({ isActive }) =>
-                      `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium ${
-                        isActive
-                          ? 'bg-sky-50 text-sky-700 font-semibold'
-                          : 'text-slate-600 hover:bg-slate-100'
+                      `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium ${isActive
+                        ? 'bg-sky-50 text-sky-700 font-semibold'
+                        : 'text-slate-600 hover:bg-slate-100'
                       }`
                     }
                   >
@@ -197,12 +195,6 @@ export function Shell({ user, onLogout, onQuickAction, children }: ShellProps) {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* OFFLINE STATUS BADGE */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="hidden sm:inline">Offline & Local Only · 127.0.0.1</span>
-              <span className="sm:hidden">Local Only</span>
-            </div>
 
             {/* QUICK ACTIONS DROPDOWN */}
             {onQuickAction && (
@@ -290,8 +282,7 @@ export function Shell({ user, onLogout, onQuickAction, children }: ShellProps) {
               to={item.to}
               end={item.to === '/'}
               className={({ isActive }) =>
-                `flex flex-col items-center gap-1 text-[10px] font-medium transition-colors py-1 px-3 ${
-                  isActive ? 'text-sky-600 font-bold' : 'text-slate-500'
+                `flex flex-col items-center gap-1 text-[10px] font-medium transition-colors py-1 px-3 ${isActive ? 'text-sky-600 font-bold' : 'text-slate-500'
                 }`
               }
             >
