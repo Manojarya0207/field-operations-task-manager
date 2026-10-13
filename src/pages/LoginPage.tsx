@@ -87,8 +87,8 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
               <input
                 name="username"
                 required
-                placeholder="e.g. Manoj"
-                defaultValue="Manoj"
+                placeholder="e.g. Manoj S Arya"
+                defaultValue={needsSetup ? 'Manoj S Arya' : ''}
                 className="w-full p-2.5 border border-slate-200 rounded-lg focus:outline-sky-500 font-mono"
               />
             </div>
@@ -99,7 +99,7 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
                 type="password"
                 name="password"
                 required
-                placeholder="e.g. Manoj"
+                placeholder="••••••••"
                 className="w-full p-2.5 border border-slate-200 rounded-lg focus:outline-sky-500 font-mono"
               />
             </div>
@@ -121,12 +121,6 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
                 </>
               )}
             </button>
-
-            {!needsSetup && (
-              <div className="text-[11px] text-slate-500 bg-slate-50 border border-slate-200/80 rounded-lg p-2 text-center">
-                Default Credentials: <span className="font-semibold text-slate-700">Manoj</span> · Password: <span className="font-semibold text-slate-700">Manoj</span>
-              </div>
-            )}
           </form>
 
           <div className="pt-4 border-t border-slate-100 text-[11px] text-slate-400 text-center space-y-1">
