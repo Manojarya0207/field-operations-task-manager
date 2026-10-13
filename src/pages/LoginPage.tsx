@@ -46,10 +46,7 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
             Offline Field Operations & Work Management
           </p>
 
-          <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-white/10 text-emerald-300 border border-white/10">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Local-Only SQLite · No Cloud Telemetry
-          </div>
+
         </div>
 
         {/* Form Container */}
@@ -78,8 +75,8 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
                 <input
                   name="name"
                   required
-                  placeholder="e.g. Ramesh Kumar"
-                  defaultValue="Ramesh Kumar"
+                  placeholder="e.g. Manoj S Arya"
+                  defaultValue="Manoj S Arya"
                   className="w-full p-2.5 border border-slate-200 rounded-lg focus:outline-sky-500"
                 />
               </div>
@@ -90,8 +87,8 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
               <input
                 name="username"
                 required
-                placeholder="e.g. technician1"
-                defaultValue={needsSetup ? 'technician1' : ''}
+                placeholder="e.g. Manoj"
+                defaultValue="Manoj"
                 className="w-full p-2.5 border border-slate-200 rounded-lg focus:outline-sky-500 font-mono"
               />
             </div>
@@ -102,7 +99,7 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
                 type="password"
                 name="password"
                 required
-                placeholder="••••••••"
+                placeholder="e.g. Manoj"
                 className="w-full p-2.5 border border-slate-200 rounded-lg focus:outline-sky-500 font-mono"
               />
             </div>
@@ -124,6 +121,12 @@ export function LoginPage({ needsSetup, onLoginSuccess }: LoginPageProps) {
                 </>
               )}
             </button>
+
+            {!needsSetup && (
+              <div className="text-[11px] text-slate-500 bg-slate-50 border border-slate-200/80 rounded-lg p-2 text-center">
+                Default Credentials: <span className="font-semibold text-slate-700">Manoj</span> · Password: <span className="font-semibold text-slate-700">Manoj</span>
+              </div>
+            )}
           </form>
 
           <div className="pt-4 border-t border-slate-100 text-[11px] text-slate-400 text-center space-y-1">

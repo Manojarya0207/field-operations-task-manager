@@ -158,7 +158,7 @@ export function createServerApp() {
     if (!body) return;
 
     const user: any = db
-      .prepare('SELECT * FROM users WHERE username = ?')
+      .prepare('SELECT * FROM users WHERE username = ? COLLATE NOCASE')
       .get(body.username);
     if (!user || !bcrypt.compareSync(body.password, user.password_hash)) {
       return res.status(401).json({ error: 'Invalid local username or password' });

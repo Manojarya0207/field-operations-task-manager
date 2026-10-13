@@ -59,8 +59,8 @@ npm run migrate
 npm run seed
 ```
 *Default Seed Credentials:*
-- **Username**: `technician1`
-- **Password**: `fieldops123`
+- **Username**: `Manoj`
+- **Password**: `Manoj`
 
 ### Running the Application
 

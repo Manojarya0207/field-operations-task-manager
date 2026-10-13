@@ -19,12 +19,12 @@ export function seedDemoData() {
   const tx = db.transaction(() => {
     // 1. Owner User
     const ownerId = nanoid();
-    const hasOwner = db.prepare('SELECT 1 FROM users WHERE username = ?').get('technician1');
+    const hasOwner = db.prepare('SELECT 1 FROM users WHERE username = ? COLLATE NOCASE').get('Manoj');
     if (!hasOwner) {
       db.prepare(`
         INSERT INTO users (id, name, username, password_hash, role, created_at)
         VALUES (?, ?, ?, ?, ?, ?)
-      `).run(ownerId, 'Ramesh Kumar', 'technician1', bcrypt.hashSync('fieldops123', 10), 'owner', stamp);
+      `).run(ownerId, 'Manoj S Arya', 'Manoj', bcrypt.hashSync('Manoj', 10), 'owner', stamp);
     }
 
     // 2. Institutions (Government Schools & Colleges)
